@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: itsiros <itsiros@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 12:07:55 by itsiros           #+#    #+#             */
-/*   Updated: 2025/06/24 11:22:49 by itsiros          ###   ########.fr       */
+/*   Created: 2025/06/24 10:41:41 by itsiros           #+#    #+#             */
+/*   Updated: 2025/07/09 10:46:35 by itsiros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main() {
-	ClapTrap claptrap1("ClapTrap1");
-	ClapTrap claptrap2("ClapTrap2");
+class ScavTrap : public ClapTrap {
 
-	claptrap1.attack(claptrap2.getName());
-	claptrap2.takeDamage(claptrap1.getAttackDamage());
+	public:
+		ScavTrap(const std::string &name);
+		~ScavTrap();
 
-	claptrap2.beRepaired(5);
-	claptrap1.attack(claptrap2.getName());
+		void attack(ScavTrap &target);
+		void guardGate();
+};
 
-	return 0;
-}
+#endif

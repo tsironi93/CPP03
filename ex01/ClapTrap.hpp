@@ -6,19 +6,14 @@
 /*   By: itsiros <itsiros@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 11:46:11 by itsiros           #+#    #+#             */
-/*   Updated: 2025/06/24 11:22:04 by itsiros          ###   ########.fr       */
+/*   Updated: 2025/06/24 11:26:18 by itsiros          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
 
 #include <string>
 
 class ClapTrap
 {
-	private:
-
 	protected:
 		std::string		_name;
 		unsigned int	_hitPoints;
@@ -41,5 +36,3 @@ class ClapTrap
 		unsigned int getEnergyPoints() const;
 		unsigned int getAttackDamage() const;
 };
-
-#endif // CLAPTRAP_HPP
